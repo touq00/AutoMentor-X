@@ -4,17 +4,27 @@ class CustomTextFormField extends StatelessWidget {
   final String labelText;
   final String hintText;
   final IconData? icon;
+  final TextEditingController? controller;
+   bool? isPassword;
 
-  const CustomTextFormField({
+
+
+
+
+   CustomTextFormField({
     Key? key,
     required this.labelText,
     required this.hintText,
     this.icon,
+    this.controller,
+     this.isPassword
+
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         floatingLabelBehavior: FloatingLabelBehavior.always,

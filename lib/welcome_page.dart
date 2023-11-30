@@ -1,3 +1,4 @@
+import 'package:auto_mentorx/bot_navbar.dart';
 import 'package:auto_mentorx/home_page.dart';
 import 'package:auto_mentorx/authentication/signup_page.dart';
 import 'package:flutter/material.dart';
@@ -69,7 +70,7 @@ class WelcomePage extends StatelessWidget {
                   InkWell(
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context){
-                        return HomePage();
+                        return TabsScreen();
                       }));
                     },
                     child: RichText(
